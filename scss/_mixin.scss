@@ -1,0 +1,50 @@
+@mixin more {
+    color: $lightbrown;
+    line-height: 24px;
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+@mixin btn-style($width, $color) {
+    text-align: center;
+    border: 2px solid $color;
+    color: $color;
+    padding: 10px;
+    border-radius: 30px;
+    width: $width;
+    &:hover {
+        background: rgba($color: $color, $alpha: 0.2);
+    }
+}
+
+@mixin background-img($url) {
+    background: url($url) center center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin sold-out {
+    background: rgba($gray, 0.5);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+}
+
+@mixin pad {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 375px) {
+        @content;
+    }
+}

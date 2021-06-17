@@ -1,16 +1,4 @@
-let data = [
-    {
-        checked: false,
-        todolist: 123
-    },
-    {
-        checked: true,
-        todolist: 456
-    },
-    {
-        checked: false,
-        todolist: 789
-    }];
+let data = [];
 const btn_add = document.querySelector(".btn_add");
 const btn_all = document.querySelector(".btn_all");
 const btn_unfinished = document.querySelector(".btn_unfinished");

@@ -1,6 +1,6 @@
 @font-face {
   font-family: "BalooTamma2";
-  src: url("../fonts/BalooTamma2-Regular.ttf") format("opentype");
+  src: url("../fonts/BalooTamma2-Bold.ttf") format("opentype");
 }
 
 @font-face {
@@ -77,13 +77,213 @@ a {
 }
 
 body {
+  font-family: "BalooTamma2", "NotoSansCJKtc";
   background-image: linear-gradient(174deg, #ffd370 2%, #ffd370 46%, #ffffff 46%, #ffffff 100%, #e8e8e8 100%);
   background-attachment: fixed;
   background-repeat: no-repeat;
+  color: #333333;
 }
 
 h1 {
-  width: 50%;
+  font-size: 30px;
+  width: 34.7%;
+  letter-spacing: 4px;
+  text-align: center;
+  line-height: 82px;
   margin: 0 auto;
+}
+
+.input {
+  max-width: 500px;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.input .input_list {
+  padding: 10px 0;
+  margin-left: 20px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.input .btn_add {
+  display: block;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  background: #333333;
+  font-size: 32px;
+  line-height: 20px;
+  border-radius: 10px;
+}
+
+.lists {
+  max-width: 500px;
+  padding-bottom: 16px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.lists .filter {
+  margin-bottom: 10px;
+}
+
+.lists .filter .cursor {
+  color: #333333;
+  font-weight: bold;
+  border-bottom: 2px solid #333333;
+}
+
+.lists .filter input {
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #efefef;
+  color: #9f9a91;
+  font-size: 14px;
+  padding: 16px 0;
+  width: 33.33%;
+}
+
+.todolist {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.todolist li {
+  padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.todolist li label {
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  line-height: 24px;
+  margin-bottom: -6px;
+}
+
+.todolist li label p {
+  display: inline-block;
+  padding-left: 10px;
+  width: 92%;
+  border-bottom: 1px solid #9f9a91;
+}
+
+.todolist li label .checkbox {
+  cursor: pointer;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.todolist li label .checkbox + span {
+  display: none;
+}
+
+.todolist li label .checkbox:checked {
+  display: none;
+}
+
+.todolist li label .checkbox:checked + span {
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  color: #ffd370;
+  font-size: 10px;
+  padding-top: 6px;
+}
+
+.todolist li label .checkbox:checked + span + p {
+  text-decoration: line-through;
+  color: #9f9a91;
+}
+
+.todolist li:hover .delete {
+  color: #333333;
+}
+
+.todolist .delete {
+  color: #fff;
+  cursor: pointer;
+  margin: 0;
+  margin-left: 15px;
+  margin-bottom: -6px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.todolist .delete:hover {
+  font-weight: bold;
+}
+
+.footer {
+  width: 90%;
+  padding-top: 30px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+
+.footer .unfinished_num {
+  display: block;
+  margin-bottom: -6px;
+}
+
+.footer .clear_btn {
+  background: none;
+  outline: none;
+  border: none;
+  color: #9f9a91;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer .clear_btn:hover {
+  text-decoration: underline;
+  background: #ffd370;
 }
 /*# sourceMappingURL=all.css.map */

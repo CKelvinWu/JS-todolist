@@ -10,7 +10,35 @@
 </head>
 
 <body>
-    <h1>todolist</h1>
+    <h1>TODO&nbspLIST</h1>
+
+    <div class="input">
+        <input class="input_list" type="text" placeholder="新增待辦事項"><input class="btn_add" type="submit" value="+">
+    </div>
+
+    <div class="lists">
+        <div class="filter">
+            <input class="btn btn_all cursor" type="button" value="全部"><input class="btn btn_unfinished" type="button"
+                value="待完成"><input class="btn btn_finished" type="button" value="已完成">
+        </div>
+
+        <ul class="todolist">
+            <li>
+                <label><input class="checkbox" type="checkbox"><span>✔</span>
+                    <p>把冰箱發霉的檸檬拿去丟</p>
+                </label><input class="delete" type="button" value="X">
+            </li>
+            <li>
+                <label><input class="checkbox" type="checkbox"><span>✔</span>
+                    <p>把冰箱發霉的檸檬拿去丟</p>
+                </label><input class="delete" type="button" value="X">
+            </li>
+        </ul>
+        <div class="footer">
+            <label class="unfinished_num">0個待完成項目</label>
+            <input class="clear_btn" type="button" value="清除已完成項目">
+        </div>
+    </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="all.js"></script>

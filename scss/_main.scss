@@ -1,5 +1,5 @@
 body {
-    font-family: "BalooTamma2", "NotoSansCJKtc";
+    font-family: "BalooTamma2", "NotoSansCJKtc", sans-serif;
     background-image: linear-gradient(174deg, $yellow 2%, $yellow 46%, #ffffff 46%, #ffffff 100%, #e8e8e8 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -72,7 +72,7 @@ h1 {
     }
 }
 
-.todolist {
+.todoList {
     margin: 0 auto;
     width: 90%;
     li {
@@ -97,37 +97,34 @@ h1 {
                 width: 92%;
                 border-bottom: 1px solid $gray;
             }
-            .checkbox {
-                cursor: pointer;
-                margin: 0;
-                width: 20px;
-                height: 20px;
-                border-radius: 5px;
-                & + span {
-                    display: none;
-                }
-                &:checked {
-                    display: none;
-                    & + span {
-                        display: inline-block;
-                        // border: 1px solid black;
-                        text-align: center;
-                        width: 20px;
-                        height: 20px;
-                        color: $yellow;
-                        font-size: 10px;
-                        padding-top: 6px;
-                    }
-                    & + span + p {
-                        text-decoration: line-through;
-                        color: $gray;
-                    }
-                }
-            }
         }
         &:hover {
             .delete {
                 color: $black;
+            }
+        }
+    }
+    .checkBox {
+        cursor: pointer;
+        margin: 0;
+        width: 20px;
+        border-radius: 5px;
+        & + span {
+            display: none;
+        }
+        &:checked {
+            display: none;
+            & + span {
+                display: inline-block;
+                text-align: center;
+                width: 20px;
+                height: 20px;
+                color: $yellow;
+                font-size: 16px;
+            }
+            & + span + p {
+                text-decoration: line-through;
+                color: $gray;
             }
         }
     }
@@ -160,7 +157,7 @@ h1 {
         display: block;
         margin-bottom: -6px;
     }
-    .clear_btn {
+    .clearDone_btn {
         background: none;
         outline: none;
         border: none;
@@ -172,4 +169,8 @@ h1 {
             background: $yellow;
         }
     }
+}
+
+.btn {
+    cursor: pointer;
 }

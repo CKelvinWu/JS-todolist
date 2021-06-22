@@ -41,22 +41,12 @@ function render() {
     calc_unfinished_num()
 
     //判斷cursor在哪
-    let cursor = filter.querySelector(".cursor");
+    const cursor = filter.querySelector(".cursor");
     refresh_filter(cursor);
 }
 
-function calc_unfinished_num() {
-    let sum = 0;
-    for (let i = 0; i < data.length; i++) {
-        if (!data[i].checked) {
-            sum++;
-        }
-    }
-    unfinished_num.textContent = sum + "個待完成項目";
-}
-
 function refresh_filter(tag) {
-    let checkBox = todoList.querySelectorAll(".checkBox");
+    const checkBox = todoList.querySelectorAll(".checkBox");
 
     if (tag.value === "已完成") {
         btn_unfinished.classList.remove("cursor");
